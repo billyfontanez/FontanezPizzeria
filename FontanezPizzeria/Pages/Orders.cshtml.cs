@@ -17,6 +17,6 @@ public class Orders : PageModel
     }
     public void OnGet()
     {
-        // PizzaOrderModels = _context.PizzaOrders.ToList();
+        PizzaOrderModels = _context.PizzaOrders.ToList();
     }
 }

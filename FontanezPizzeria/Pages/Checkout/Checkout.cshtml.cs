@@ -34,7 +34,7 @@ public class Checkout : PageModel
         pizzaOrder.PizzaName = PizzaName;
         pizzaOrder.BasePrice = PizzaPrice;
 
-        // _context.PizzaOrders.Add(pizzaOrder);
-        // _context.SaveChanges();
+        _context.PizzaOrders.Add(pizzaOrder);
+        _context.SaveChanges();
     }
 }

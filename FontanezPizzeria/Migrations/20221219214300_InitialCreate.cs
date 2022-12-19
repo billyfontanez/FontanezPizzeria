@@ -4,7 +4,7 @@
 
 namespace FontanezPizzeria.Migrations
 {
-    public partial class addedPizzaOrder : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,10 +12,10 @@ namespace FontanezPizzeria.Migrations
                 name: "PizzaOrders",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PizzaName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BasePrice = table.Column<float>(type: "real", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    PizzaName = table.Column<string>(type: "TEXT", nullable: false),
+                    BasePrice = table.Column<float>(type: "REAL", nullable: false)
                 },
                 constraints: table =>
                 {
